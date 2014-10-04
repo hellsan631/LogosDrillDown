@@ -19,7 +19,7 @@ Recommended VelocityJS
 http://julian.com/research/velocity/
 ```
 
-### Installaction
+### Installation
 
 Just include the twitter bootstrap css in the header, along with the (recommended) base style sheet.
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Drill Down Base Menu</title>
+
+    <!-- Bootstrap latest just link up to the latest ============================================== -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <!-- Base Theme Style(s) ============================================== -->
+    <link href="assets/css/styleBase.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<!-- ============ NAV WRAPPER =============== -->
+<div class="nav-wrapper">
+
+    <!-- ============ BEGIN NAVIGATION =============== -->
+
+    <div class="menu-breadcrumbs"></div>
+
+    <nav id="nav">
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li class="menu-label">About Us</li>
+                    <li><a href="#">History</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+<!--/.nav-wrapper -->
+
+
+<!-- _________ FOOTER SCRIPTS ________ -->
+<script src="assets/js/jquery-2.js"></script>
+<script src="assets/js/velocity.min.js"></script>
+<script src="assets/js/logosDrillDown.min.js"></script>
+
+<script>
+
+    // Initialize menu
+    $(document).ready(function() {
+
+        'use strict';
+
+        var $breadcrumbs = $(".nav-wrapper .menu-breadcrumbs"),
+                $drillDown = $("#nav");
+
+        $drillDown.logosDrillDown({
+            onOpened: manageBreadcrumbs,
+            onClosed: manageBreadcrumbs,
+            expandableClass: "has-children",
+            startName: "Home"
+        });
+
+        //If you want the menu to resize when you resize the window,
+        //just call this function
+        $(window).on('resize', function(){
+            $drillDown.logosDrillDown("windowResizeEvent");
+        });
+
+        function manageBreadcrumbs() {
+            $breadcrumbs.html($drillDown.logosDrillDown("getBreadcrumbsFormatted"));
+        }
+
+        manageBreadcrumbs();
+    });
+
+</script>
+
+</body>
+</html>
