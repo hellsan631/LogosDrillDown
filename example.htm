@@ -1,0 +1,202 @@
+<!--[if IE ]><![endif]-->
+<!DOCTYPE html>
+<!--[if lt IE 8]> <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]> <html class="no-js lt-ie9 ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js lt-ie10 ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Drill Down Test Menu</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Bootstrap latest just link up to the latest ============================================== -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <!-- Base Theme Style(s) ============================================== -->
+    <link href="assets/css/styleBase.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<!-- begin #page -->
+<div id="page">
+    <div class="content clearfix">
+
+    </div>
+    <!-- /.content -->
+</div>
+<!-- #page -->
+
+
+<!-- ============ NAV WRAPPER =============== -->
+<div class="nav-wrapper">
+
+    <!-- ============ BEGIN NAVIGATION =============== -->
+
+    <div class="menu-breadcrumbs"></div>
+
+    <nav id="nav">
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About Us</a>
+                <ul>
+                    <li class="menu-label">About Us</li> <!-- title of this section // optional looks nice though -->
+                    <li><a href="#">History</a></li>
+                    <li>
+                        <a href="#">Team</a>
+                        <ul>
+                            <li class="menu-label">Team</li>
+                            <!-- title of this section -->
+                            <li><a href="#">Management</a></li>
+                            <li>
+                                <a href="#">Sales</a>
+                                <ul>
+                                    <li class="menu-label">Sales</li>
+                                    <!-- title of this section -->
+                                    <li><a href="#">Management</a></li>
+                                    <li><a href="#">Development</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Development</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Our address</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-search">
+        <form>
+            <input class="form-control" type="text" placeholder="menu search + enter" />
+        </form>
+    </div>
+
+    <div id="searchResults" class="searchResults"></div>
+
+    <div class="content">
+        <h5>Contact Us</h5>
+        <p class="no-margin-bottom">
+            Responsive Heads Up<br>
+            1255 Nowhere Street<br>
+            Tampa, FL 33655<br>
+            <strong>phone:</strong> <a class="text-underline" href="tel:1231231231">123.123.1231</a><br>
+            <strong>fax:</strong> 123.123.1232<br>
+            <span class="overflow"><strong>email:</strong> <a  class="text-underline" href="mailto:email@domain.com">email@companydomain.com</a></span>
+        </p>
+    </div>
+</div>
+<!--/.nav-wrapper -->
+
+<!-- ============ NAV CONTROLS =============== -->
+<div class="nav-controls">
+    <ul>
+        <li>
+            <a href="#" class="toggle-menu hamburger tooltip-hover" data-placement="left" title="toggle menu">
+                <span class="lines"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="toggle-search tooltip-hover" data-placement="left" title="search site">
+                <i class="fa fa-search"></i>
+            </a>
+        </li>
+        <li>
+            <!-- these trigger a panel // tooltip-hover only works on no-touch devices to avoid interferring with the tap -->
+            <a href="#" title="follow us on..." class="toggle-social tooltip-hover" data-placement="left">
+                <i class="fa fa-google-plus"></i>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-github"></i>
+                <i class="fa fa-pinterest"></i>
+                <i class="fa fa-instagram"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<!--/.nav-controls -->
+
+<!-- ============ SEARCH PANEL =============== -->
+<div class="vpanel search">
+    <a href="#" class="close"><span></span></a>
+    <div class="content">
+        <form role="form">
+            <input type="search" placeholder="Enter search term and press enter" class="form-control">
+        </form>
+    </div>
+</div>
+<!--/.vpanel search -->
+<div class="vpanel social">
+    <a href="#" class="close"><span></span></a>
+    <div class="content">
+        <h3 class="text-center">Follow Us On...</h3>
+        <ul class="center-list">
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-github"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!--/.vpanel social -->
+
+
+<!-- _________ FOOTER SCRIPTS ________ -->
+<script src="assets/js/jquery-2.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/modernizr.js"></script>
+<script src="assets/js/respond.js"></script>
+<script src="assets/js/velocity.min.js"></script>
+<script src="assets/js/logosDrillDown.js"></script>
+
+<script>
+
+    // Initialize menu
+    $(document).ready(function() {
+
+        'use strict';
+
+        var $breadcrumbs = $(".nav-wrapper .menu-breadcrumbs"),
+                $drillDown = $("#nav");
+
+        $drillDown.logosDrillDown({
+            onOpened: manageBreadcrumbs,
+            onClosed: manageBreadcrumbs,
+            expandableClass: "has-children",
+            startName: "Home"
+        });
+
+        //Here is where the resize magic happens
+        $(window).on('resize', function(){
+            //Calling $("#nav") instead of $drillDown might fix some small issues if they pop up
+            $drillDown.logosDrillDown("windowResizeEvent");
+        });
+
+        $drillDown.logosDrillDown("searchWrapper", $(".menu-search > form"), $("#searchResults"));
+
+        function manageBreadcrumbs() {
+            $breadcrumbs.html($drillDown.logosDrillDown("getBreadcrumbsFormatted"));
+        }
+
+        manageBreadcrumbs();
+    });
+
+</script>
+
+</body>
+</html>
