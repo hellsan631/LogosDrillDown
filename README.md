@@ -63,7 +63,7 @@ Then add in your scripts
 ```html
 <script src="assets/js/jquery-2.js"></script>
 <script src="assets/js/velocity.min.js"></script>
-<script src="assets/js/logosDrillDown.min.js"></script>
+<script src="./logosDrillDown.min.js"></script>
 
 <script>
 
